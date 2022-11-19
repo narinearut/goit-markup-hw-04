@@ -219,21 +219,17 @@ header {
     margin-right: 10px;
 }
 
-.svg-mail {
-    fill: var(--secondary-text-color);
-    margin-right: 10px;
-}
+
 
 .svg-tel:hover,
 .svg-tel:focus {
     fill: var(--accent-color);
 }
-
-.mail-item {
-    display: flex;
-    justify-content: baseline;
-    align-items: baseline;
+.tel:hover .svg-tel,
+.tel:focus .svg-tel {
+    fill: var(--accent-color);
 }
+
 
 .tel-item {
     display: flex;
@@ -241,16 +237,17 @@ header {
     align-items: center;
 }
 
-.tel-item:hover .svg-tel {
-    fill: var(--accent-color);
+.svg-mail {
+    fill: var(--secondary-text-color);
+    margin-right: 10px;
 }
 
 .svg-mail:hover,
 .svg-mail:focus {
     fill: var(--accent-color);
 }
-
-.mail-item:hover .svg-mail {
+.mail:hover .svg-mail,
+.mail:focus .svg-mail {
     fill: var(--accent-color);
 }
 
@@ -321,6 +318,8 @@ header {
     box-shadow: 0px 4px 4px var(--black-logo);
     border-radius: 4px;
     border: 1px solid transparent;
+
+    cursor: pointer;
 }
 
 
@@ -341,6 +340,8 @@ header {
     text-align: center;
     border-radius: 4px;
     border: 1px solid transparent;
+
+    cursor: pointer;
 }
 
 
@@ -494,7 +495,8 @@ header {
     background-color: var(--accent-color);
 }
 
-.soc-link:hover .icon-site {
+.soc-link:hover .icon-site,
+.soc-link:focus .icon-site {
     fill: var(--white-text);
 }
 
@@ -510,22 +512,6 @@ header {
     display: block;
     width: 170px;
     height: 92px;
-    padding-top: 16px;
-    padding-right: 32px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-
-    border: 1px solid var(--primary-icon-color);
-    border-radius: 4px;
-}
-
-.item-klient:hover {
-    border-color: var(--accent-color);
-
-}
-
-.item-klient:hover .icon-klient {
-    fill: var(--accent-color);
 }
 
 .link-klient {
@@ -535,8 +521,26 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--primary-icon-color);
+    border-radius: 4px;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+}
+
+.link-klient:hover,
+.link-klient:focus {
+    border-color: var(--accent-color);
 
 }
+
+.link-klient:hover .icon-klient,
+.link-klient:focus .icon-klient {
+    fill: var(--accent-color);
+}
+
+
 
 .icon-klient {
     fill: var(--primary-icon-color);
